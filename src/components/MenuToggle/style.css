@@ -1,0 +1,53 @@
+.button-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: none;
+
+  width: 2rem;
+  height: 2rem;
+
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+@media (min-width: 480px) {
+  .button-toggle {
+    display: none;
+  }
+}
+
+.button-toggle:focus {
+  outline: none;
+}
+
+.toggle-line {
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+  background: #0d0c1d;
+}
+
+.one-open {
+  transform: rotate(45deg);
+}
+
+.three-open {
+  transform: rotate(-45deg);
+}
+
+.toggle-line-close {
+  transform: rotate(0);
+}
+
+.two-open {
+  opacity: 0;
+}
+
+.two-close {
+  opacity: 1;
+}

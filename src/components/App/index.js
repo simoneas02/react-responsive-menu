@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import Routes from '../../routes';
-import Menu from '../Menu';
+import Header from '../Header';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Menu />
+      <Header />
       <Routes />
     </BrowserRouter>
   );

@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+}
+
+.header-show {
+  height: 100vh;
+  background: pink;
+  align-items: flex-start;
+}
