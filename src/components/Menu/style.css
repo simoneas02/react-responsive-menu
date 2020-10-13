@@ -33,3 +33,13 @@
 .menu-list-item-show {
   margin-bottom: 20px;
 }
+
+.nav-link {
+  color: forestgreen;
+  text-decoration: none;
+}
+
+.selected {
+  color: red;
+  box-shadow: red 0 -0.1rem 0 0 inset;
+}

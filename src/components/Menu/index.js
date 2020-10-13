@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { mapRoutes } from '../../routes';
 import MenuToggle from '../MenuToggle';
@@ -11,16 +11,22 @@ const Menu = ({ open, setOpen }) => (
     <MenuToggle open={open} setOpen={setOpen} />
     <nav className={`nav-menu ${open ? 'nav-show' : ''}`}>
       <ul className={`menu-list ${open ? 'menu-list-show' : ''}`}>
-        {mapRoutes.map(({ path, icon: Component, menu }, index) => (
+        {mapRoutes.map(({ path, icon: Component, menu, exact }, index) => (
           <li
             key={index}
             className={`${open ? 'menu-list-item-show' : ''}`}
             onClick={() => setOpen(false)}
           >
-            <Link rel="noopener noreferrer" to={path}>
+            <NavLink
+              className="nav-link"
+              activeClassName="selected"
+              exact={exact}
+              rel="noopener noreferrer"
+              to={path}
+            >
               <Component />
               {menu}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>
